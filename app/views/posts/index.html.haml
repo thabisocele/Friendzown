@@ -1,0 +1,30 @@
+#post
+  - @posts.each do |post|
+    .post
+  
+      .date
+        %p
+          published
+          = time_ago_in_words(post.created_at)
+          ago
+  
+      %p= link_to post.content, post_path(post)
+ 
+
+      
+
+      
+
+  
+     
+      
+        
+      
+
+
+
+         
+
+
+
+

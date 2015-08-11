@@ -1,0 +1,46 @@
+.show
+  .date
+    %p
+      published
+      = time_ago_in_words(@post.created_at)
+      ago
+  %p= @post.content
+  = image_tag @post.image.url(:medium)
+
+
+  - if current_user == @post.user
+    = link_to "Home", root_path
+    = link_to "Edit", edit_post_path(@post)
+    = link_to "delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?"}
+    
+  - else
+    = link_to "Home", root_path
+
+  %h3
+    = @post.comments.count
+
+    - if @post.comments.count  == 1
+      comment
+    - elsif @post.comments.count == 0
+      comments
+    
+    - else
+      comments
+
+
+
+#comment
+  
+  = render @post.comments
+
+  %hr
+  = render "comments/form"
+  
+  
+  
+    
+  
+  
+  
+ 
+

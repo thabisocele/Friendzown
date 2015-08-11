@@ -1,0 +1,10 @@
+.comment_show
+  %p= comment.comment
+  #comment_buttons
+    - if comment.user_id == current_user.id 
+      = link_to "edit", edit_post_comment_path(comment.post, comment)
+      = link_to "Delete", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?"}
+    - else
+
+
+    
