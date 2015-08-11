@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   
   
      
-  
+  get 'home' => 'home#index'
   
   root 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.

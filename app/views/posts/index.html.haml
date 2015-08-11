@@ -1,8 +1,10 @@
 #post
   - @posts.each do |post|
     .post
+    
   
       .date
+      
         %p
           published
           = time_ago_in_words(post.created_at)
