@@ -1,4 +1,9 @@
 .show
+  .post
+    .round-image-50
+      = image_tag @post.user.avatar.url(:thumb)
+    .user_name  
+      = link_to @post.user.user_name, users_path(@user)
   .date
     %p
       published
@@ -10,7 +15,6 @@
 
 
   - if current_user.id == @post.user_id
-    = link_to "Home", root_path
     = link_to "Edit", edit_post_path(@post)
     = link_to "delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?"}
     

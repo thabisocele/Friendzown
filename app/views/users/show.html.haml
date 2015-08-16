@@ -1,0 +1,27 @@
+#profile
+  .profile_cover
+    .profile
+      = image_tag @user.avatar.url(:medium)
+    %h1= @user.user_name
+
+    #post
+      - @user.posts.each do |post|
+        .post
+          .round-image-50
+            = image_tag post.user.avatar.url(:thumb)
+          .user_name  
+            = link_to post.user.user_name, users_path(@user)
+          .date
+            %p
+              published
+              = time_ago_in_words(post.created_at)
+              ago
+  
+          %p
+            = link_to post.content, post_path(post)
+          = image_tag post.image.url(:medium) 
+  
+
+
+
+  

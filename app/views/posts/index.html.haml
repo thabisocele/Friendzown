@@ -2,6 +2,10 @@
   - @posts.each do |post|
   
     .post
+      .round-image-50
+        = image_tag post.user.avatar.url(:thumb)
+      .user_name  
+        = link_to post.user.user_name, users_path(@user)
       .date
         %p
           published
@@ -11,10 +15,6 @@
       %p= link_to post.content, post_path(post)
 
       = image_tag post.image.url(:medium)
-
-      
-      
-
         
   
      
