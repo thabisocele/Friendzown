@@ -26,8 +26,8 @@ body{
 
 
 #new {
-	width: 110%;
-	height: 5em;
+	width: 50%;
+	height: 6em;
 	border-radius: .2em;
 	padding-left: 2.5em;
 	padding-top: .5em;
@@ -37,6 +37,7 @@ body{
 	background: #FAFAFA;
     border: 1px solid #d1d1d1;
     margin-top: .5em;
+    margin-left:20em;
 
 
 	#post_content {
@@ -235,16 +236,21 @@ h2 {
 	         width: 100%;
 	
 	        background: white;
+	        height:3.5em;
 	
 	#logo {
-
 		float:left;
+		margin-left:7em;
+		margin-top:.3em;
 		p {
 			text-transform: uppercase;
 			font-weight:100;
 			letter-spacing: -1px;
 			font-size:.8em;
 			padding-right:1.5em;
+			color:#70C670;
+
+
 			
 
 	    a {
@@ -252,19 +258,41 @@ h2 {
 	    	text-transform:uppercase;
 			padding-left: 5.5em;
 		    font-weight: 500;
-		    color:#70C670;
 		   	text-decoration: none;
 		    font-size:1.5em;
+		    color:#70C670;
 		}
 		    
 				
 		}
 	}
-#buttons {
-	float:right;
-	width: 15%;
-    margin-top: 1em;
-    margin-right:4.5em;
+	#buttons {
+		float:right;
+		margin-right:.8em;
+		margin-top:1em;
+
+		.round-image-50 {
+			background-color: white;
+            border: 1px solid #d9d9d9;
+            border-radius: 25px;
+            -moz-border-radius: 25px;
+            -webkit-border-radius: 25px;
+            height: 50px;
+            width: 50px;
+            overflow: hidden;
+            text-align: center;
+            float: right;
+            margin-top: -.8em;
+            margin-left: 1em;
+
+            img { width: 100% }
+
+}
+	}
+	
+
+
+
 	
 	a {
 
@@ -286,12 +314,12 @@ h2 {
 		
 		
 }
-}
+
 
 
 #post {
 	margin-left:20em;
-	width:40%;
+	width:42%;
 		
 
 	
@@ -300,7 +328,7 @@ h2 {
 	background:white;
 	padding: 2em 5%;
 	border-radius:0.4em;
-	width:115%;
+	width:105%;
 	margin-bottom: 1em;
     border: 1px solid #d1d1d1;
     padding-bottom: 1em;
@@ -353,7 +381,7 @@ h2 {
 	    
 		background:white;
 		border-radius:0.4em;
-		width:120%;
+		width:50%;
 	    border: 1px solid #d1d1d1;
 	    padding-bottom: 1.2em;
 	    margin-bottom: 1.5em;
@@ -361,6 +389,7 @@ h2 {
 		margin-top: 2em;
 		padding-top:1.5em;
 		padding-right:.5em;
+		margin-left:20em;
 
 
 
@@ -419,10 +448,11 @@ h2 {
 
 					#comment {
 						border: 1px solid #d1d1d1;
-					    width: 127.5%;
+					    width: 53%;
 					    background: #FAFAFA;                                                            
 					    border-radius: .1em;
 					    margin-top:-2em;
+					    margin-left:20em;
 					    
 					
 					    }										
@@ -511,6 +541,9 @@ h2 {
 		font-size:2.5em;
 	}
 }
+
+
+
 
 
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150810235335) do
+ActiveRecord::Schema.define(version: 20150813174701) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "comment"
@@ -24,8 +24,16 @@ ActiveRecord::Schema.define(version: 20150810235335) do
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
-# Could not dump table "posts" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "posts", force: :cascade do |t|
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.text     "content"
+    t.integer  "user_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -46,6 +54,12 @@ ActiveRecord::Schema.define(version: 20150810235335) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "user_name"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

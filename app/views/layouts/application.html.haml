@@ -20,11 +20,17 @@
   %header.main_hearder.clearfix
     #logo 
       %p 
-        =link_to"Friendzown", root_path
+      =link_to"Friendzown", root_path
     #buttons
       - if user_signed_in?
+        
+        = link_to "Edit profile", edit_user_registration_path
         = link_to "New Post", new_post_path
         = link_to "Sign Out", destroy_user_session_path, method: :delete
+        .round-image-50
+          = image_tag(current_user.avatar.url(:thumb))
+    
+        
       - else
         = link_to "Sign-up", new_user_registration_path
         = link_to "Sign-in", new_user_session_path

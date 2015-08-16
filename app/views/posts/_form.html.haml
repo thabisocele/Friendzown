@@ -1,5 +1,5 @@
 #new
-  = simple_form_for @post, html: { multipart: true } do |f|
+  = simple_form_for @post do |f|
     = f.input :content
     = f.file_field :image
     = f.submit

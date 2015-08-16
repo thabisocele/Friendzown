@@ -58,7 +58,11 @@ gem 'activerecord', '~> 4.2.3'
 
 gem 'acts_as_votable', '~> 0.10.0'
 
-#for image uploading
-gem 'paperclip', '~> 4.3.0'
+gem "cocaine", '0.5.5'
+
+gem 'paperclip', '~> 4.2'
 
 
+gem 'mimemagic', '~> 0.3.0'
+
+gem 'mime-types', '~> 2.6.1'
